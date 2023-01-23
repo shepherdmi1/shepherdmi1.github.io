@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <title> Minecraft Fun </title>
+    <script>
+function banner(){
+  var text = confirm("Did you really want to click on that?");
+  return text;
+}
+
+function answer(){
+  var radio = document.getElementsByName("trivia");
+  var selection = false;
+  var message = "";
+  for( var i = 0; i < radio.length; i++) {
+  if(radio[i].value == "yes" && radio[i].checked == true) {
+  selection = true;
+  } //end if statement
+  } //end for loop
+  if(selection == true) {
+    message = message + "<b><p style='color:green'>Way to go!</p></b>";
+
+  } else {
+    message = message + "<b><p style='color:red'>Better luck next time.</p></b>";
+  }
+  document.getElementById("response").innerHTML = message;
+      }
+    </script>
+
+  </head>
+  <body id="background">
+<a onclick="return banner()" href="https://coolmathgames.com">
+
+    <header id="banner"> <span class="wrap-text">Minecraft</span> Is Fun!</header>
+
+</a>
+    <nav>
+      <ul id="navmenu">
+        <li class="navitem"> <a href="index.html"> Home </a> </li>
+        <li class="navitem"> <a href="videos.html"> Videos </a> </li>
+      </ul>
+    </nav>
+
+    <div class="rightside">
+
+       
+<center>
+       <img width="50%" src="https://thumbs.dreamstime.com/z/minecraft-logo-online-game-dirt-block-illustrations-concept-design-isolated-186775550.jpg"/>
+    <img width="50%" src="https://thumbs.dreamstime.com/z/beginners-character-180374941.jpg"/>
+</center>
+    </div> <!-- closing rightside div tag -->
+
+    <div class="leftside">
+
+        <h1>Playing Minecraft</h1>
+
+      <p>
+        If you like to play <strong>Minecraft</strong> then this is the website for you. On this website you will find mods you can code, <u>awesome builds</u> you can make, survival tips, <span class="wrap-text">enchantment tips</span>, how to defeat the <i>Ender Dragon</i>, Wither, and more.
+      </p>
+
+      <div class="wrap-list">
+       <ol>
+          <li class="listitem">the Ender Dragon has 100 hearts!</li>
+          <li class="listitem">When you defeat the Ender Dragon it drops 12,000 experience points!</li>
+          <li class="listitem">The best way to get to the End is to throw Eyes of Ender and follow them until they land on the same place, then dig straight down.</li>
+        </ol>
+      </div>
+
+       <div class="wrap-trivia">
+        <h2> Minecraft Trivia Question:</h2>
+        <p class="question">What is the strongest ore in Minecraft?</p>
+        <form>
+          <div id="response"></div>
+          <input type="radio" name="trivia" value="no"> Iron </br>
+          <input type="radio" name="trivia" value="no"> diamond</br>
+          <input type="radio" name="trivia" value="yes"> netherite</br>
+          <input type="radio" name="trivia" value="no"> stone</br>
+          <input onclick="answer()" id="button" type="button" value="Submit">
+        </form>
+      </div>
+
+    </div> <!-- closing leftside div tag -->
+
+    <div class="clearfloat"></div>
+
+   
+
+    <hr/>
+
+    <center> Mitchell <a href="https://www.coolmathgames.com/">My Favorite Website</a></center>
+
+    <footer id="footer">Created by Mitchell</footer>
+
+  </body>
+</html>
